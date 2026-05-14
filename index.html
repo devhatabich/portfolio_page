@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+
+
+<nav>
+    <a href="#hero" class="logo">temur@setu</a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#documentation">Docs</a></li>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+        <div class="hero-photo">
+            <video autoplay muted loop playsinline>
+                <source src="./movies/emoji.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-text">
+            <h1>Hi, It's <span>Temur</span></h1>
+            <div class="typing-line">
+                <span class="prefix">I'm a </span>
+                <span id="typed-text"></span><span class="cursor"></span>
+            </div>
+            <div class="hero-icons">
+                <a href="https://linkedin.com/in/rustamovt" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/devhatabich" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:cstimich@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+
+<section id="about">
+    <div class="section-wrap">
+        <div class="section-heading">
+            <h2>TutorMe – Peer Tutoring Platform</h2>
+            <p>What is my project all about?</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>TutorMe is a full-stack peer tutoring platform built to reduce delays in getting academic support and make it easier for students to help each other while earning points through completed tutoring sessions. The system allows students to create profiles, connect with peers, publish studying related posts, send messages, schedule meetings and earn points.</p>
+                <p>The platform was implemented using the <strong>MERN stack</strong> with <strong>MongoDB</strong> for data storage, <strong>Express.js</strong> and <strong>Node.js</strong> for the backend API and <strong>React</strong> for the frontend. Live communication is supported through <strong>Socket.io</strong> for instant message delivery between connected users.</p>
+                <p>Authentication is handled through <strong>JSON Web Tokens</strong> with both email/password login and <strong>Google OAuth 2.0</strong>. The system also includes meeting scheduling with validation rules, a rating and points mechanism to encourage engagement and an administrative dashboard to moderate content posted within the platform.</p>
+                <p>TutorMe was deployed using <strong>Docker</strong> for containerisation and hosted on <strong>AWS EC2</strong>, with static assets and media stored in <strong>AWS S3</strong>. A <strong>GitHub Actions</strong> CI/CD pipeline was configured to automate testing and deployment on every push. Testing was carried out using <strong>Jest</strong> for unit and integration tests and <strong>Playwright</strong> for E2E testing across the application.</p>
+                <p>The project provides students with an interactive and engaging environment for academic collaboration with the aim of improving academic performance, increasing motivation through gamification and promoting a supportive culture within the university.</p>
+
+                <!-- Tech Stack Badges -->
+                <div class="tech-stack">
+                    <p class="tech-stack-label">Tech Stack &amp; Tools</p>
+                    <div class="tech-badges">
+                        <!-- Core stack -->
+                        <span class="tech-badge teal"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="tech-badge teal"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-badge teal"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="tech-badge teal"><i class="fab fa-react"></i> React</span>
+                        <span class="tech-badge teal"><i class="fas fa-plug"></i> Socket.io</span>
+                        <!-- Auth -->
+                        <span class="tech-badge sage"><i class="fas fa-key"></i> JWT</span>
+                        <span class="tech-badge sage"><i class="fab fa-google"></i> OAuth 2.0</span>
+                        <!-- DevOps & Cloud -->
+                        <span class="tech-badge gold"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="tech-badge gold"><i class="fab fa-aws"></i> AWS EC2</span>
+                        <span class="tech-badge gold"><i class="fas fa-bucket"></i> AWS S3</span>
+                        <span class="tech-badge gold"><i class="fas fa-code-branch"></i> GitHub Actions</span>
+                        <!-- Testing -->
+                        <span class="tech-badge lavender"><i class="fas fa-flask"></i> Playwright</span>
+                        <span class="tech-badge lavender"><i class="fas fa-vial"></i> Jest</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="./images/landing.png" alt="TutorMe landing page"
+                     onerror="this.parentNode.innerHTML='<div class=\'about-img-placeholder\'><i class=\'fas fa-shield-halved\'></i></div>'"/>
+                <div style="text-align:center; padding: 1.2rem;">
+                    <a href="http://tutorm3.club/" target="_blank" class="btn">
+                        <i class="fas fa-arrow-up-right-from-square" style="margin-right:0.4em;"></i>
+                        Visit TutorMe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="features">
+    <div class="section-wrap">
+        <div class="section-heading">
+            <h2>Core Features implemented in TutorMe</h2>
+            <p>What makes my project valuable?</p>
+        </div>
+        <!-- FIX: 6-column grid so 3 cards fill row 1 and last 2 are centred in row 2 -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-link"></i></div>
+                <h3>Posts and Academic Interaction</h3>
+                <p>Students can create study related posts, interact through comments, and use the feed as a central space for academic collaboration. From there, they can connect with peers, start conversations, and arrange tutoring sessions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                <h3>Live Messaging</h3>
+                <p>Connected users can exchange messages instantly with the help of Socket.io, while conversations and messages are stored persistently in the database.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                <h3>Meeting Scheduling</h3>
+                <p>Users can schedule tutoring sessions with peers, while backend validation prevents invalid bookings, duplicate meetings and overlapping sessions to make sure that the points awarding system remains fair for all users on the platform.</p>
+            </div>
+            <!-- 4th & 5th: centred via nth-child grid-column rules -->
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-star"></i></div>
+                <h3>Rating and Points System</h3>
+                <p>Completed tutoring sessions can be rated and points are transferred based on session outcomes to encourage active participation and engagement among students.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                <h3>Admin Moderation</h3>
+                <p>The system provides an administrative dashboard for content moderation within the platform. Users can report inappropriate feed content, offensive messages and suspicious user activity to help ensure that platform content remains in line with university policies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="documentation">
+    <div class="section-wrap">
+        <div class="section-heading">
+            <h2>Documentation</h2>
+           <p>What documentation was produced throughout the different stages of my project’s development ?</p>
+        </div>
+        <div class="docs-grid">
+            <div class="doc-card">
+                <div class="doc-icon"><i class="fas fa-magnifying-glass"></i></div>
+                <h3>Research Report</h3>
+                <p>Presents the background research carried out during the early stage of the project including student engagement and the technologies considered for development.</p>
+                <a href="./docs/research.pdf" target="_blank" class="doc-btn">View Research Report</a>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>Project Specification</h3>
+                <p>Sets out the proposed system design, architecture, tools, core features and planned development milestones for TutorMe Platform.</p>
+                <a href="./docs/specs.pdf" target="_blank" class="doc-btn">View Documentation</a>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"><i class="fas fa-file-lines"></i></div>
+                <h3>Final Report</h3>
+                <p>Provides a comprehensive documentation of the final system, implementation, testing results and limitations of TutorMe.</p>
+                <a href="#" class="doc-btn">View Final Report</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="showcase">
+    <div class="section-wrap">
+        <div class="section-heading">
+            <h2>Showcase</h2>
+            <p>Explore the core features implemented in TutorMe</p>
+        </div>
+        
+        <div class="showcase-grid">
+
+            <div class="showcase-item">
+                <video autoplay muted loop playsinline>
+                    <source src="./movies/landingmovie.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <img src="legit.png" alt="Landing Page"
+                     onerror="this.outerHTML='<div class=\'showcase-img-placeholder\'><i class=\'fas fa-circle-check\'></i></div>'"/> -->
+                <div class="showcase-label">
+                    <h3>Landing Page and Authentication</h3>
+                    <p>The platform allows students to register with email and password, sign in using Google OAuth 2.0, and access the system through a simple and clear entry point.</p>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <video autoplay muted loop playsinline>
+                    <source src="./movies/feed.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <img src="spam.png" alt="Post Feed"
+                     onerror="this.outerHTML='<div class=\'showcase-img-placeholder\'><i class=\'fas fa-triangle-exclamation\'></i></div>'"/> -->
+                <div class="showcase-label">
+                    <h3>Post Feed</h3>
+                    <p>The feed acts as a central space for academic interaction, where students can create posts about the academic difficulties they are facing and other students can respond by commenting and offering their support.</p>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <!-- <img src="emailClassification.png" alt="User Profiles"
+                     onerror="this.outerHTML='<div class=\'showcase-img-placeholder\'><i class=\'fas fa-chart-pie\'></i></div>'"/> -->
+                     <video autoplay muted loop playsinline>
+                        <source src="./movies/profile.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                     </video>
+                <div class="showcase-label">
+                    <h3>User Profiles</h3>
+                    <p>Each profile presents student information, outlining subject expertise, peer connections, recent activity and feedback received from completed tutoring sessions.</p>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <!-- <img src="EmailAuthentication.png" alt="Messaging Page"
+                     onerror="this.outerHTML='<div class=\'showcase-img-placeholder\'><i class=\'fas fa-key\'></i></div>'"/> -->
+                     <video autoplay muted loop playsinline>
+                        <source src="./movies/message.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                     </video>
+                <div class="showcase-label">
+                    <h3>Messaging</h3>
+                    <p>Connected users can exchange messages instantly, making it easier to discuss study needs and organise tutoring support.</p>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <!-- <img src="linkAnalysis.png" alt="Meetings and Ratings"
+                     onerror="this.outerHTML='<div class=\'showcase-img-placeholder\'><i class=\'fas fa-shield-halved\'></i></div>'"/> -->
+                     <video autoplay muted loop playsinline>
+                        <source src="./movies/review.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                     </video>
+                <div class="showcase-label">
+                    <h3>Meetings and Ratings</h3>
+                    <p>Students can schedule tutoring sessions, manage upcoming meetings and rate completed sessions through the platform.</p>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <!-- <img src="PerplexityAnalysis2.png" alt="Admin Dashboard"
+                     onerror="this.outerHTML='<div class=\'showcase-img-placeholder\'><i class=\'fas fa-comment-dots\'></i></div>'"/> -->
+                     <video autoplay muted loop playsinline>
+                        <source src="./movies/admin.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                     </video>
+                <div class="showcase-label">
+                    <h3>Admin Dashboard</h3>
+                    <p>The administration area supports moderation by allowing reports, users, and platform activity to be monitored and managed in one place.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="section-wrap">
+        <div class="section-heading">
+            <h2>Let's Stay Connected!</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-methods">
+                <a class="contact-chip" href="https://linkedin.com/in/rustamovt" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a class="contact-chip"  href="https://github.com/devhatabich" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>Github</span>
+                </a>
+                <a class="contact-chip" href="mailto:cstimich@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Gmail</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer>
+    <p>Made with love by <a href='https://github.com/devhatabich'>@devhatabich</a> &nbsp;·&nbsp; &copy; 2026 TutorMe - University Peer Tutoring Platform &nbsp;·&nbsp; &copy;  All rights reserved.</p>
+</footer>
+
+
+<script>
+    const phrases = [
+        "Final Year Computer Science Student",
+        "Software Engineer",
+        "Full Stack Developer",
+        "Cloud Enthusiast",
+    ];
+
+    const el       = document.getElementById('typed-text');
+    let phraseIdx  = 0;
+    let charIdx    = 0;
+    let deleting   = false;
+
+    // Speeds (ms)
+    const TYPE_SPEED   = 60;
+    const DELETE_SPEED = 35;
+    const PAUSE_END    = 1800; // pause when fully typed
+    const PAUSE_START  = 350;  // pause before typing next phrase
+
+    function tick() {
+        const current = phrases[phraseIdx];
+
+        if (!deleting) {
+            // Type one character
+            charIdx++;
+            el.textContent = current.slice(0, charIdx);
+
+            if (charIdx === current.length) {
+                // Fully typed — pause then start deleting
+                setTimeout(() => { deleting = true; tick(); }, PAUSE_END);
+                return;
+            }
+            setTimeout(tick, TYPE_SPEED);
+        } else {
+            // Delete one character
+            charIdx--;
+            el.textContent = current.slice(0, charIdx);
+
+            if (charIdx === 0) {
+                // Fully deleted — move to next phrase
+                deleting = false;
+                phraseIdx = (phraseIdx + 1) % phrases.length;
+                setTimeout(tick, PAUSE_START);
+                return;
+            }
+            setTimeout(tick, DELETE_SPEED);
+        }
+    }
+
+    // Kick off after a short delay
+    setTimeout(tick, 600);
+</script>
+
+</body>
+</html>
